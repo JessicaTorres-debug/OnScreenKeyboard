@@ -28,6 +28,9 @@ const Keyboard = {
 
     keys = keysContainer.querySelectorAll('.keyboard__key');
 
+    // Add to DOM
+    main.appendChild(keysContainer);
+    document.body.appendChild(main);
   },
 
 }
