@@ -44,5 +44,11 @@
   background: rgba(255, 255, 255, 0.12);
 }
 
-
+.keyboard__key--wide {
+  width: 12%;
+}
+.keyboard__key--extra-wide {
+  width: 36%;
+  max-width: 500px;
+}
 
