@@ -10,7 +10,8 @@
 // '#480355'
 // '#132A13' - not used
 function changeColor(color) {
-  document.bgColor = color;
+  document.getElementsByClassName('keyboard')[0].style.backgroundColor = color;
+  // document.bgColor = color;
 }
 
 const Keyboard = {
