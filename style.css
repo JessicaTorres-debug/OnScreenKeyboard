@@ -68,3 +68,7 @@
   background: #08ff00;
 }
 
+.keyboard__key--dark {
+  background: rgba(0, 0, 0, 0.25);
+}
+
