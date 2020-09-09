@@ -1,2 +1,4 @@
 # OnScreenKeyboard
-Responsive, touch enabled on-screen keyboard built with vanilla JavaScript, HTML, and CSS
+- Responsive
+- Touch Enabled
+- Built with vanilla JavaScript, HTML, and CSS
