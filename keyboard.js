@@ -22,6 +22,12 @@ const Keyboard = {
     main = document.createElement('div');
     keysContainer = document.createElement('div');
 
+    // Setup main elements
+    main.classList.add('keyboard', 'keyboard--hidden');
+    keysContainer.classList.add('keyboard__keys');
+
+    keys = keysContainer.querySelectorAll('.keyboard__key');
+
   },
 
 }
