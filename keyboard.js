@@ -31,6 +31,35 @@ const Keyboard = {
     // Add to DOM
     main.appendChild(keysContainer);
     document.body.appendChild(main);
+
+    // Automatically use keyboard for elements with .use-keyboard-input
+    document.querySelectorAll('.use-keyboard-input').forEach(element => {
+      element.addEventListener('focus', () => {
+        this.open(element.value, currentValue => {
+          element.value = currentValue;
+        });
+      });
+    });
   },
+
+  open(initialValue, oninput, onclose) {
+    const { properties: { value }, eventHandlers: { oninput, onclose }, elements: { main } } = this;
+
+    value = initialValue || "";
+    oninput = oninput;
+    onclose = onclose;
+
+    main.classList.remove("keyboard--hidden");
+  },
+
+  close() {
+    const { properties: { value }, eventHandlers: { oninput, onclose }, elements: { main } } = this;
+
+    value = "";
+    oninput = oninput;
+    onclose = onclose;
+
+    main.classList.add("keyboard--hidden");
+  }
 
 }
