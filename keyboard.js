@@ -133,8 +133,21 @@ const Keyboard = {
   },
 
   _triggerEvent(handlerName) {
-    if (typeof this.eventHandlers[handlerName] == "function") {
-      this.eventHandlers[handlerName](this.properties.value);
+    const { properties: { value }, eventHandlers } = this;
+
+    if (typeof eventHandlers[handlerName] == "function") {
+      eventHandlers[handlerName](value);
+    }
+  },
+
+  _toggleCapsLock() {
+    const { properties: { value, capsLock }, elements: { keys }} = this;
+
+    capsLock = !capsLock;
+    for (const key of keys) {
+      if (key.childElementCount === 0) {
+        key.textContent = capsLock ? key.textContent.toUpperCase() : key.textContent.toLowerCase();
+      }
     }
   },
 
