@@ -1,8 +1,8 @@
 /* Page */
 body {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+  display: block;
+  /* justify-content: center; */
+  /* overflow: hidden; */
 }
 
 /* Board */
@@ -97,12 +97,9 @@ input {
 }
 
 .menu {
-  margin: 0 auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -25px;
-  margin-top: -25px;
+  right: 25%;
+  top: 24%;
 }
 
 .btn {
