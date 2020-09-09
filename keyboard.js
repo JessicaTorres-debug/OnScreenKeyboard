@@ -25,6 +25,7 @@ const Keyboard = {
     // Setup main elements
     main.classList.add("keyboard", "keyboard--hidden");
     keysContainer.classList.add("keyboard__keys");
+    keysContainer.appendChild(_createKeys());
 
     keys = keysContainer.querySelectorAll(".keyboard__key");
 
@@ -129,6 +130,12 @@ const Keyboard = {
     });
 
     return fragment;
+  },
+
+  _triggerEvent(handlerName) {
+    if (typeof this.eventHandlers[handlerName] == "function") {
+      this.eventHandlers[handlerName](this.properties.value);
+    }
   },
 
   open(initialValue, oninput, onclose) {
