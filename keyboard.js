@@ -11,5 +11,7 @@ const Keyboard = {
   },
 
   properties: {
+    value: "",
+    capsLock: false
   },
 }
