@@ -6,6 +6,8 @@ const Keyboard = {
   },
 
   eventHandlers: {
+    oninput: null,
+    onclose: null
   },
 
   properties: {
