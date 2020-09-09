@@ -64,4 +64,7 @@
   background: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
 }
+.keyboard__key--active::after {
+  background: #08ff00;
+}
 
