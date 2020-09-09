@@ -19,22 +19,22 @@ const Keyboard = {
     const { elements: { main, keysContainer, keys }, _createKeys } = this;
 
     // Create the main elements
-    main = document.createElement('div');
-    keysContainer = document.createElement('div');
+    main = document.createElement("div");
+    keysContainer = document.createElement("div");
 
     // Setup main elements
-    main.classList.add('keyboard', 'keyboard--hidden');
-    keysContainer.classList.add('keyboard__keys');
+    main.classList.add("keyboard", "keyboard--hidden");
+    keysContainer.classList.add("keyboard__keys");
 
-    keys = keysContainer.querySelectorAll('.keyboard__key');
+    keys = keysContainer.querySelectorAll(".keyboard__key");
 
     // Add to DOM
     main.appendChild(keysContainer);
     document.body.appendChild(main);
 
     // Automatically use keyboard for elements with .use-keyboard-input
-    document.querySelectorAll('.use-keyboard-input').forEach(element => {
-      element.addEventListener('focus', () => {
+    document.querySelectorAll(".use-keyboard-input").forEach(element => {
+      element.addEventListener("focus", () => {
         this.open(element.value, currentValue => {
           element.value = currentValue;
         });
@@ -60,6 +60,10 @@ const Keyboard = {
     onclose = onclose;
 
     main.classList.add("keyboard--hidden");
-  }
+  },
 
 }
+
+window.addEventListener("DOMContentLoaded", function () {
+  Keyboard.init();
+});
