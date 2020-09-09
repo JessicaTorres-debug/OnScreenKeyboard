@@ -14,4 +14,10 @@ const Keyboard = {
     value: "",
     capsLock: false
   },
+
+  init() {
+    const { elements: { main, keysContainer, keys }, _createKeys } = this;
+
+  },
+
 }
