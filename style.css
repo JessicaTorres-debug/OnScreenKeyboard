@@ -1,3 +1,4 @@
+/* Board */
 .keyboard {
   position: fixed;
   left: 0;
@@ -12,3 +13,32 @@
 .keyboard--hidden {
   bottom: -100%;
 }
+
+
+/* Keys */
+.keyboard__keys {
+  text-align: center;
+}
+.keyboard__key {
+  height: 45px;
+  width: 6%;
+  max-width: 90px;
+  margin: 3px;
+  border-radius: 4px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1.05rem;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+
+
