@@ -1,3 +1,15 @@
+//colors
+// '#2d2357' - not used
+// '#780116'
+// '#3E2A35'
+// '#7E998A'
+// '#1C3738'
+// '#849324'
+// '#01295F'
+// '#B87D00'
+// '#480355'
+// '#132A13' - not used
+
 const Keyboard = {
   elements: {
       main: null,
@@ -12,7 +24,8 @@ const Keyboard = {
 
   properties: {
       value: "",
-      capsLock: false
+      capsLock: false,
+      color: '#2d2357'
   },
 
   init() {
