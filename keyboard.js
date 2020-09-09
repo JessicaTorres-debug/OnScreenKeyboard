@@ -9,6 +9,9 @@
 // '#B87D00'
 // '#480355'
 // '#132A13' - not used
+function changeColor(color) {
+  document.bgColor = color;
+}
 
 const Keyboard = {
   elements: {
